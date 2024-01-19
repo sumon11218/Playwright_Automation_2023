@@ -11,12 +11,15 @@ test.beforeAll(async({browser}) =>{
 //search for bmw 
 test("Search for BMW on Search Field @smoke",async() => {
     //navigate to google
+    console.log("Navigating to Google home page")
     await page.goto("https://www.google.com")
     //wait few seconds
-    await page.waitForTimeout(3000)
+    await page.waitForTimeout(7000)
     //type bmw on your search field
+    console.log("Entering BMW as a keyword on google search field")
     await page.locator("xpath=//*[@name='p']").fill("BMW",{timeout:3000})
     //click on google search button
+    console.log("Clicking on google search button")
     await page.locator("xpath=//*[@name='btnK']").nth(1).click()
 })//end of test
 
@@ -25,6 +28,7 @@ test("Capture the search number for BMW",async() => {
     //wait few seconds
     await page.waitForTimeout(3000)
     //store the search results text in a variablen 
+    console.log("Capturing search results for BMW")
     let result = await page.locator("xpath=//*[@id='result-stats']").textContent()
     //capture the search number and print it out
     let arrayResult = result.split(" ")
