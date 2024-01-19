@@ -1,0 +1,31 @@
+{
+  "name": "playwrightautomation_2023",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "googleSearch": "npx playwright test src/test/GoogleSearch.spec.ts --headed --project=chrome --workers=1 --reporter=html",
+    "fidelisTest": "npx playwright test src/test/FidelisCare.spec.ts --headed --project=chrome --workers=1 --project=safari --reporter=html",
+    "uhcTest": "npx playwright test src/test/UHC.spec.ts --headed --project=chrome --workers=1 --reporter=html",
+    "nbaTest": "npx playwright test src/test/NBA.spec.ts --headed --project=chrome --workers=1 --reporter=html",
+    "showReport": "npx playwright show-report",
+    "smokeSuite": "npx playwright test --grep @smoke src/test/* --headed --project=chrome --workers=1 --reporter=html",
+    "runAllFiles": "npx playwright test src/test/* --headed --project=chrome --workers=1 --reporter=html",
+    "googleSearchLoop": "npx playwright test src/test/GoogleSearchLoop.spec.ts --headed --project=chrome --workers=1 --reporter=html",
+    "googleSearchCB": "npx playwright test src/test/GoogleSearch.spec.ts --headed --project=chrome --project=firefox --project=edge --workers=1 --reporter=html",
+    "googleSearchCBParallel": "npx playwright test src/test/GoogleSearchLoop.spec.ts --headed --project=chrome --project=firefox --project=safari --workers=3 --reporter=html",
+    "noteTakerApi": "npx playwright test src/test/NoteTakerAPI.spec.ts --headed --project=chrome --workers=1 --reporter=html",
+    "dhlTest": "npx playwright test src/test/dhl-test.spec.ts --headed --project=chrome --workers=1 --reporter=html",
+    "googleDataDriven": "npx playwright test src/test/GoogleSearch_DataDriven.spec.ts --headed --project=chrome --workers=1 --reporter=html"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.39.0",
+    "@types/node": "^20.8.10"
+  },
+  "dependencies": {
+    "exceljs": "^4.4.0"
+  }
+}
