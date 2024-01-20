@@ -13,7 +13,7 @@
     "runAllFiles": "npx playwright test src/test/* --headed --project=chrome --workers=1 --reporter=html",
     "googleSearchLoop": "npx playwright test src/test/GoogleSearchLoop.spec.ts --headed --project=chrome --workers=1 --reporter=html",
     "googleSearchCB": "npx playwright test src/test/GoogleSearch.spec.ts --headed --project=chrome --project=firefox --workers=1 --reporter=html",
-    "googleSearchCBHeadless": "npx playwright test src/test/GoogleSearch.spec.ts --project=chrome --project=firefox --project=safari --workers=1 --reporter=html",
+    "googleSearchCBHeadless": "npx playwright test src/test/GoogleSearch.spec.ts --project=chrome --project=firefox --project=edge --workers=1 --reporter=html",
     "googleSearchCBParallel": "npx playwright test src/test/GoogleSearchLoop.spec.ts --headed --project=chrome --project=firefox --project=safari --workers=3 --reporter=html",
     "noteTakerApi": "npx playwright test src/test/NoteTakerAPI.spec.ts --headed --project=chrome --workers=1 --reporter=html",
     "dhlTest": "npx playwright test src/test/dhl-test.spec.ts --headed --project=chrome --workers=1 --reporter=html",
