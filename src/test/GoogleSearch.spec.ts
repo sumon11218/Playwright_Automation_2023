@@ -20,12 +20,10 @@ test("Search for BMW on Search Field @smoke",async() => {
     await page.locator("xpath=//*[@name='q']").fill("BMW",{timeout:3000})
     //click on google search button
     console.log("Clicking on google search button")
-    await page.locator("xpath=//*[@name='btnK']").nth(1).click()
-    //wait few seconds
-    await page.waitForTimeout(3000)
+    await page.locator("xpath=//*[@name='btnK']").nth(1).click({timeout:3000})
     //store the search results text in a variablen 
     console.log("Capturing search results for BMW")
-    let result = await page.locator("xpath=//*[@id='result-stats']").textContent()
+    let result = await page.locator("xpath=//*[@id='result-stats']").textContent({timeout:3000})
     //capture the search number and print it out
     let arrayResult = result.split(" ")
     console.log("BMW search number is " + arrayResult[1])
