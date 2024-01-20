@@ -11,7 +11,13 @@ test.beforeAll(async({browser}) =>{
 //search for bmw 
 test("Search for BMW on Search Field @smoke",async({browserName}) => {
     console.log("***************************************")
-    console.log("Running Test on " + browserName)
+    let browser
+    if(browserName == 'webkit'){
+        browser = 'safari'
+    } else {
+        browser = browserName
+    }
+    console.log("Running Test on " + browser)
     console.log("***************************************")
     //navigate to google
     console.log("Navigating to Google home page")
