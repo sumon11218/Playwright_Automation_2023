@@ -2,7 +2,7 @@ import { test, expect, Page } from '@playwright/test'
 
 let page: Page
 //using context concept rather than page whenever you are dealing with multiple tabs on your single test
-test("'Find a doctor' by a zipcode and then switch back to default tab to click on 'visit us' ",async({context}) => {
+test("'Find a doctor' by a zipcode and then switch back to default tab to click on 'visit us' @smoke",async({context}) => {
     let page = await context.newPage()
     let timelimit = 8000
     //navigate to google

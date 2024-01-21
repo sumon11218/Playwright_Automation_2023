@@ -17,10 +17,8 @@ jobs:
       run: npm ci
     - name: Install Playwright Browsers
       run: npx playwright install --with-deps
-    - name: Run Google Cross Browser Test
-      run: npm run googleSearchCBHeadless
-    - name: Run Fidelis Care Test 
-      run: npm run fidelisTestHeadless
+    - name: Run Google Search & Fidelis Care Cross Browser Tests
+      run: npm run smokeSuiteHeadless
     - uses: actions/upload-artifact@v3
       if: always()
       with:
