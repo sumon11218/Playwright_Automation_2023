@@ -19,7 +19,7 @@
     "noteTakerApi": "npx playwright test src/test/NoteTakerAPI.spec.ts --headed --project=chrome --workers=1 --reporter=html",
     "dhlTest": "npx playwright test src/test/dhl-test.spec.ts --headed --project=chrome --workers=1 --reporter=html",
     "googleDataDriven": "npx playwright test src/test/GoogleSearch_DataDriven.spec.ts --headed --project=chrome --workers=1 --reporter=html",
-    "smokeSuiteHeadless": "npx playwright test --grep @smoke src/test/* --headed --project=chrome --project=safari --workers=1 --reporter=html"
+    "smokeSuiteHeadless": "npx playwright test --grep @smoke src/test/* --project=chrome --project=safari --workers=1 --reporter=html"
   },
   "keywords": [],
   "author": "",
