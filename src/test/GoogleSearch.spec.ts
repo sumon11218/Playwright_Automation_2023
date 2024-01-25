@@ -27,6 +27,6 @@ test("Search for BMW on Search Field @smoke",async() => {
     //capture the search number and print it out
     let arrayResult = result.split(" ")
     console.log("BMW search number is " + arrayResult[1])
-    //test
+    //this is for testing
 })//end of test
 
