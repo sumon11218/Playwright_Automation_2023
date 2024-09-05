@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "googleSearch": "npx playwright test src/test/GoogleSearch.spec.ts --headed --project=chrome --workers=1 --reporter=html",
-    "fidelisTest": "npx playwright test src/test/FidelisCare.spec.ts --headed --project=chrome --workers=1 --project=safari --reporter=html",
+    "fidelisTest": "npx playwright test src/test/FidelisCare.spec.ts --headed --project=chrome --workers=2 --project=safari --reporter=html",
     "fidelisTestHeadless": "npx playwright test src/test/FidelisCare.spec.ts --project=chrome --project=safari --workers=1  --reporter=html",
     "uhcTest": "npx playwright test src/test/UHC.spec.ts --headed --project=chrome --workers=1",
     "nbaTest": "npx playwright test src/test/NBA.spec.ts --headed --project=chrome --workers=1 --reporter=html",
